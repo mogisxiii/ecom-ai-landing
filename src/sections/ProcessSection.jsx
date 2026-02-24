@@ -58,6 +58,7 @@ export default function ProcessSection() {
 
   return (
     <section
+      id="process"
       ref={sectionRef}
       className="relative overflow-hidden bg-surface-soft py-28"
     >

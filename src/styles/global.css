@@ -22,9 +22,7 @@ html {
 }
 
 body {
-  body {
-   @apply font-body bg-gray-50 text-gray-800 antialiased;
-}
+    @apply font-body bg-gray-50 text-gray-800 antialiased;
   line-height: 1.6;
 }
 

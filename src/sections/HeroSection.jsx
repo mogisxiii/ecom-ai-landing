@@ -37,6 +37,14 @@ export default function HeroSection() {
     borderRadius: ui?.borderRadius || "14px",
   }
 
+  // 🔥 Scroll helper
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section
       id="hero"
@@ -49,7 +57,7 @@ export default function HeroSection() {
       {/* Background Glow */}
       {preset === "dark-tech" && (
         <div
-          className="absolute inset-0 opacity-30 blur-3xl"
+          className="absolute inset-0 opacity-30 blur-3xl pointer-events-none"
           style={{
             background: `radial-gradient(circle at 30% 30%, ${
               colors.primary || "#3b82f6"
@@ -100,24 +108,25 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
 
           {primaryButton && (
-            <a
-              href={primaryButton.link}
+            <button
+              onClick={() => scrollToSection("demo")}
               className="px-8 py-4 font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
               style={primaryButtonStyle}
             >
               {primaryButton.text}
-            </a>
+            </button>
           )}
 
           {secondaryButton && (
-            <a
-              href={secondaryButton.link}
+            <button
+              onClick={() => scrollToSection("process")}
               className="px-8 py-4 font-semibold transition-all duration-300 hover:bg-white/5"
               style={secondaryButtonStyle}
             >
               {secondaryButton.text}
-            </a>
+            </button>
           )}
+
         </div>
       </div>
     </section>

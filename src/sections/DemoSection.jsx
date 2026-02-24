@@ -77,7 +77,7 @@ export default function DemoSection() {
   }
 
   return (
-    <section className="bg-white py-28">
+    <section id="demo" className="bg-white py-28">
       <div className="container max-w-4xl">
 
         <div className="text-center mb-16">
