@@ -1,0 +1,197 @@
+/* =========================================================
+   GLOBAL STYLES – PRODUCTION READY
+   Compatible with custom tailwind.config.js
+========================================================= */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   BASE RESET
+================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  body {
+   @apply font-body bg-gray-50 text-gray-800 antialiased;
+}
+  line-height: 1.6;
+}
+
+/* Prevent horizontal overflow */
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   TYPOGRAPHY SYSTEM
+================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display text-gray-900;
+  line-height: 1.25;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl font-bold;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+h3 {
+  @apply text-xl md:text-2xl font-semibold;
+}
+
+p {
+  @apply text-base text-gray-600;
+}
+
+/* ===============================
+   CONTAINER SYSTEM
+================================ */
+
+.container {
+  @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
+/* ===============================
+   SECTION SPACING
+================================ */
+
+.section-padding {
+  @apply py-20 md:py-28;
+}
+
+/* ===============================
+   BUTTON BASE SYSTEM
+================================ */
+
+.btn {
+  @apply inline-flex items-center justify-center
+         px-6 py-3 rounded-xl font-semibold
+         transition-all duration-300 ease-in-out
+         focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-brand-600 text-white shadow-soft
+         hover:bg-brand-700 hover:shadow-medium
+         active:scale-95;
+}
+
+.btn-accent {
+  @apply bg-accent-500 text-white shadow-glowAccent
+         hover:bg-accent-600 hover:shadow-strong
+         active:scale-95;
+}
+
+.btn-outline {
+  @apply border border-gray-300 text-gray-700
+         hover:bg-gray-100;
+}
+
+/* ===============================
+   CARD SYSTEM
+================================ */
+
+.card {
+  @apply bg-white rounded-2xl shadow-soft
+         transition-all duration-300;
+}
+
+.card-hover {
+  @apply hover:-translate-y-2 hover:shadow-medium;
+}
+
+/* ===============================
+   IMAGE DEFAULT
+================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+}
+
+/* ===============================
+   INPUT & FORM
+================================ */
+
+input,
+textarea,
+select {
+  @apply w-full px-4 py-3 rounded-xl border border-gray-300
+         focus:ring-2 focus:ring-brand-500 focus:border-brand-500
+         outline-none transition;
+}
+
+label {
+  @apply text-sm font-medium text-gray-700 mb-1 block;
+}
+
+/* ===============================
+   LINK STYLE
+================================ */
+
+a {
+  @apply transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-brand-600;
+}
+
+/* ===============================
+   SCROLLBAR (Optional Premium)
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5b4fc;
+}
+
+/* ===============================
+   ANIMATION UTILITIES
+================================ */
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
